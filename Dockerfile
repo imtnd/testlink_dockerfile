@@ -1,9 +1,9 @@
-FROM ubuntu
+FROM ubuntu:15.04
 
 MAINTAINER imtnd
 
 RUN apt-get update -yqq && \
-    apt-get install -yqq apache2 php5 wget php5-mysql
+    apt-get install -yqq apache2 php5 wget php5-mysql php5-curl
 
 RUN wget -q http://sourceforge.net/projects/testlink/files/TestLink%201.9/TestLink%201.9.14/testlink-1.9.14.tar.gz/download -O testlink-1.9.14.tar.gz &&\
     tar zxvf testlink-1.9.14.tar.gz && \
